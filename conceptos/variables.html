@@ -32,7 +32,54 @@
             Si estamos al máximo nivel, la variable es global.
         </p>
         <p>
-            Desde 
+            Usando var la declaración pasa al principio de la función.
         </p>
+
+
+        <p>
+            <em>let</em> declara las variables al nivel "de bloque" (dentro de llaves). Es decor, el ámbito
+            de la variable es todo el bloque en el que se declara y sus bloques internos.
+        </p>
+        <p>
+            Si estamos al máximo nivel, la variable no "entra" en las funciones.
+        </p>
+
+        <p>
+            <em>const</em> declara las variables al nivel "funcional". Es decir, igual que var.
+        </p>
+        
+        <script>
+            console.log('num1 al principio existe, pero vale ' + num1)
+            //console.log('num2 al principio NO existe. ' + num2)
+
+            var mun1
+            num1 = 7
+            f1()
+            let num2 = 42
+
+            function f1() {
+                
+                console.log('num1 existe (es global) y vale ' + num1)
+                //console.log('num2 no existe dentro de la función ' + num2)
+
+                if (true){ //Creamos un bloque
+
+                    let num2 = 45 //num2 es otra variable
+                    console.log('num2 es otra variable (es local, de bloque) y vale ' + num2)
+                }
+            }
+
+            f2()
+            function f2() {
+                var num1 = 67
+                console.log('NUM vale ' + num1)
+            }
+
+            const NUM3 = 56
+            console.log('NUM3 vale ' + NUM3)
+            //NUM3 = 57 no puedo reasignar
+        </script>
+
+        <p><em>Moraleja: </em> Si puedes utiliza const. Si no, usa let salvo que que necesites una variable global(usas var).</p>
     </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Curso de JavaScript</title>
+
+        <!--link rel="stylesheet" href="css/reset.css" /-->
+        <link rel="stylesheet" href="../../css/estilos.css" />
+    </head>
+    <body>
+        <h1>Ejercicios de funciones</h1>
+
+        <h2>Ejercicio 1</h2>
+        <p>
+            Elaborar una función a la cual le enviamos tres enteros y devuelva el menor.
+        </p>
+        <script>
+            'use strict'
+
+            function numeroMenor(num1, num2, num3) {
+               
+                if (num1<num2 && num1<num3) {
+                    return num1
+                }else{
+                    if (num2<num1 && num2<num3) {
+                        return num2
+                    } else {
+                        return num3
+                    }
+                }
+            }
+
+            console.log('Ejercicio 1')
+            console.log(numeroMenor(1, 2, 3) + ' = ' + 1)
+            console.log(numeroMenor(2, 1, -5) + ' = ' + -5)
+            console.log(numeroMenor(-1, -2, 1) + ' = ' + -2)
+            console.log(numeroMenor(0, 0, 0) + ' = ' + 0)
+        </script>
+
+        <h2>Ejercicio 4</h2>
+        <p>
+            Elaborar una función a la cual le envíe el valor del lado de un cuadrado y
+            me retorne su perímetro.
+        </p>
+
+        <script>
+            'use strict'
+
+            function perimetroCuadrado(lado) {
+                
+                return lado * 4
+            }
+
+            console.log('Ejercicio 4')
+            console.log('El perímetro de un cuadrado de lado 2 es ' + perimetroCuadrado(2))
+        </script>
+
+        <h2>Ejercicio 5</h2>
+        <p>
+            Desarrollar una función que retorne la cantidad de dígitos que tiene una
+            variable entera positiva.
+        </p>
+
+        <script>
+            'use strict'
+
+            function contadorDigitos(numero) {
+                
+                return numero.toString().length
+            }
+
+            console.log('Ejercicio 5')
+            console.log('El numero 7 tiene ' + contadorDigitos(7))
+            console.log('El numero 12 tiene ' + contadorDigitos(12))
+            console.log('El numero 121 tiene ' + contadorDigitos(121))
+            console.log('El numero 1212 tiene ' + contadorDigitos(1212))
+        </script>
+    </body>
+</html>
