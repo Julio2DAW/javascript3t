@@ -16,6 +16,7 @@
         <p>
             Elaborar una función a la cual le enviamos tres enteros y devuelva el menor.
         </p>
+
         <script>
             'use strict'
 
@@ -76,6 +77,216 @@
             console.log('El numero 12 tiene ' + contadorDigitos(12))
             console.log('El numero 121 tiene ' + contadorDigitos(121))
             console.log('El numero 1212 tiene ' + contadorDigitos(1212))
+        </script>
+
+        <h2>Ejercicios de Miguel</h2>
+
+        <h3>Ejercicio 1</h3>
+        <p>
+            Programar una función que reciba tres números y devuelva su suma.
+        </p>
+
+        <script>
+            'use strict'
+
+            function suma(a, b, c) {
+
+                return a + b + c
+            }
+
+            console.log('Ejercicios Miguel')
+            console.log('Ejercicio 1')
+            console.log('Los números 3 + 2 + 1 suman: ' + suma(3,2,1))
+            console.log('Los números -3 + 2 + 1 suman: ' + suma(-3,2,1))
+            console.log('Los números 2.7 + 2 + 1 suman: ' + suma(2.7,2,1))
+            console.log('Los números 3 + -20 + 1 suman: ' + suma(3,-20,1))
+        </script>
+
+        <h3>Ejercicio 2</h3>
+        <p>
+            Programar una función que reciba tres números y devuelva el menor
+        </p>
+
+        <script>
+            'use strict'
+
+            function numeroMenor(num1, num2, num3) {
+               
+                if (num1<num2 && num1<num3) {
+                    return num1
+                }else{
+                    if (num2<num1 && num2<num3) {
+                        return num2
+                    } else {
+                        return num3
+                    }
+                }
+            }
+
+            console.log('Ejercicio 2')
+            console.log('El menor de 2, 4 y 6 es: ' + numeroMenor(2,4,6))
+            console.log('El menor de 4, 2 y 10 es: ' + numeroMenor(4,2,10))
+            console.log('El menor de -2, -4 y 2 es: ' + numeroMenor(-2,-4,2))
+            console.log('El menor de 0, 0 y 0 es: ' + numeroMenor(0,0,0))
+        </script>
+
+        <h3>Ejercicio 3</h3>
+        <p>
+            Programar una función que reciba el valor del lado de un cuadrado y devuelva su perímetro.
+        </p>
+
+        <script>
+            'use strict'
+
+            function perimetroCuadrado(lado) {
+                
+                return lado * 4
+            }
+
+            console.log('Ejercicio 3')
+            console.log('El perímetro de un cuadrado de lado 3.5 es ' + perimetroCuadrado(3.5))
+        </script>
+
+        <h3>Ejercicio 4</h3>
+        <p>
+            Programar una función que reciba número y devuelva su número de dígitos.
+        </p>
+
+        <script>
+            'use strict'
+
+            function contadorDigitos(numero) {
+                
+                return numero.toString().length
+            }
+
+            console.log('Ejercicio 4')
+            console.log('El numero 1 tiene ' + contadorDigitos(1) + ' dígito')
+            console.log('El numero 10 tiene ' + contadorDigitos(10) + ' dígitos')
+            console.log('El numero 100 tiene ' + contadorDigitos(100) + ' dígitos')
+            console.log('El numero 1000 tiene ' + contadorDigitos(1000) + ' dígitos')
+        </script>
+
+        <h3>Ejercicio 5</h3>
+        <p>
+            Programar una función que reciba tres números y devuelva su promedio.
+        </p>
+
+        <script>
+            'use strict'
+
+            function promedio(a, b, c) {
+
+                return (a + b + c) / 3
+            }
+
+            console.log('Ejercicio 5')
+            console.log('El promedio de 10 + 20 + 40 es: ' + promedio(10,20,40))
+            console.log('El promedio de 0 + 0 + 0 es: ' + promedio(0,0,0))
+            console.log('El promedio de 10 + 20 + -40 es: ' + promedio(10,20,-40))
+        </script>
+
+        <h3>Ejercicio 6</h3>
+        <p>
+            Programar una función que reciba dos números y nos indique si el primero es múltiplo del segundo.
+        </p>
+
+        <script>
+            'use strict'
+
+            function multiplo(a, b) {
+                
+                if ((a % b) == 0) {
+                    
+                    return true
+                } else {
+                    
+                    return false
+                }
+            }
+
+            console.log('Ejercicio 6')
+            console.log('¿Es 5 múltiplo de 2? => ' + multiplo(5,2))
+            console.log('¿Es 4 múltiplo de 2? => ' + multiplo(4,2))
+        </script>
+
+        <h3>Ejercicio 7</h3>
+        <p>
+            Programar una función que reciba el nombre y muestre por consola un saludo educado.
+        </p>
+
+        <script>
+            'use strict'
+
+            function nombre(name) {
+
+                return name
+            }
+
+            console.log('Ejercicio 7')
+            console.log(`Buenos días ${nombre('Abel')}`)
+            console.log(`Buenos días ${nombre('Miguel')}`)
+            console.log(`Buenos días ${nombre('Julio')}`)
+        </script>
+
+        <h3>Ejercicio 8</h3>
+        <p>
+            Programar una función que reciba un número y muestre por consola la tabla de multiplicar de ese número.
+        </p>
+
+        <script>
+            'use strict'
+
+            function tabla_multiplicar(numero) {
+
+                let resultado
+                for (let i=1; i<=10; i++) {
+
+                    resultado = numero * i
+                    console.log(`${numero} * ${i} = ${resultado}`)
+                }
+
+                return numero
+            }
+
+            console.log('Ejercicio 8')
+            console.log('Tabla de multiplicar del ' + tabla_multiplicar(2))
+        </script>
+
+        <h3>Ejercicio 9</h3>
+        <p>
+            Programar una función que reciba un número y devuelva un texto conla tabla de multiplicar de ese número.
+        </p>
+
+        <script>
+            'use strict'
+
+            function tabla_multiplicar(numero) {
+
+                let resultado
+                for (let i=1; i<=10; i++) {
+
+                    resultado = numero * i
+                    document.write(`El resultado de ${numero} * ${i} es ${resultado}<br />`)
+                }
+
+                return numero
+            }
+
+            console.log('Ejercicio 9')
+            console.log('Tabla de multiplicar del ' + tabla_multiplicar(5))
+        </script>
+
+        <h3>Ejercicio 10</h3>
+        <p>
+            Programar una función que reciba un número y un caracter muestre una flecha hacia la derecha
+            formada con el carácter recibido y con tantas filas como el doble del número más uno.
+        </p>
+
+        <script>
+            'use strict'
+
+            
         </script>
     </body>
 </html>
