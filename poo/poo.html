@@ -57,6 +57,38 @@
             console.log(cuadradoVerde.getArea())
         </script>
 
+        <p>
+            <dfn>this</dfn> es la palabra reservada que hace referencia al objeto que ejecuta el código.
+        </p>
+
+        <h2>Relaciones entre clases</h2>
+        <h3>Uso</h3>
+        <p>
+            Una clase usa a otra clase cuando alguno de sus atributos o alguno de los parámetros o resultados
+            de sus métodos son objetos de otra clase.
+        </p>
+        <p>Ejemplo</p>
+        <pre>
+            class Persona{}
+
+            class Factura{
+
+                setCliente(cliente){ 
+                    //Si cliente es un objeto de tipo Persona, entonces la clase Factura "usa" a Persona.
+
+                    this.cliente = cliente
+                }
+            }
+        </pre>
+
+        <h3>Herencias</h3>
+        <p></p>
+        <p>super, que es y que hace</p>
+        <p>Ejemplo</p>
+        <pre>
+
+        </pre>
+
         <h2><a href="ejercicios/ejerciciosPOO.html">Ejercicios POO</a></h2>
     </body>
 </html>

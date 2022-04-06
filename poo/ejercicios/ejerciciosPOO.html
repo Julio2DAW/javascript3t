@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="../../css/estilos.css" />
     </head>
     <body>
-       
-        <h1>Ejercicio 1</h1>
+        <h1>Ejericicios POO</h1>
+
+        <h2>Ejercicio 1</h2>
         <p>
             Crea una clase "Factura" con los atributos:<br />
 
@@ -28,17 +29,18 @@
             'use strict'
 
             class Factura{
+                            //Valores por defecto
+                constructor(cliente = null , base = 0, tipoIVA = 21){
 
-                constructor(cliente, base, tipoIVA){
-
-                    this.cliente = null
-                    this.base = 0
-                    this.tipoIVA = 21
+                    this.cliente = cliente
+                    this.base = base
+                    this.tipoIVA = tipoIVA
                 }
 
-                setCliente(string){
+                
+                setCliente(cliente){
 
-                    this.cliente = string
+                    this.cliente = cliente
                 }
 
                 getCliente(){
@@ -46,36 +48,77 @@
                     return this.cliente
                 }
 
-                setBase(float){
+                setBase(base){
 
-                    this.base = float
+                    this.base = base
                 }
 
                 getBase(){
 
-                    return this.base
+                    return this.cliente
                 }
 
-                setTipoIVA(int){
+                setTipoIVA(tipoIVA){
 
-                    this.tipoIVA = int
+                    this.tipoIVA = tipoIVA
                 }
 
                 getTipoIVA(){
 
-                    return this.tipoIVA
+                    return tipoIVA
                 }
 
-                getTotal(base, tipoIVA){
+                getTotal(){
 
-                    base = 134.45
+                    return (this.base*this.tipoIVA)/100+this.base
+                }
+            }
 
-                    let resultado = (base * tipoIVA) / 100
-                    console.log(resultado)
-                    return resultado
+            let f1 = new Factura("El corte Inglés", 2500, 21)
+            console.log(f1)
+
+            let f2 = new Factura("Zara", 3000)
+            console.log(f2)
+
+            f2.cliente = "Embutidos López"
+            console.log(f1.cliente)
+
+            //Crear una factura
+            let mediamark = new Factura("MediaMark", 1000, 21)
+            console.log(mediamark.getTotal())
+        </script>
+
+        <h2>Ejericicio 2</h2>
+        <p>
+            Crea una clase "Poligono" con los atributos:<br />
+
+            - nombre {String}. Nombre del Polígono.<br />
+            - lado {Number}. Número real con el tamaño del lado del polígono.<br />
+            - numLados {Number}. Número entero con el número de lados del polígono.<br />
+
+            Crea un constructor que reciba e inicialice los atributos.<br />
+            Crea los getters y setters correspondientes.<br />
+            Crea dos objetos de la clase Polígono con distintos atributos.
+        </p>
+
+        <script>
+            'use strict'
+
+            class Poligono{
+
+                constructor(nombre = null, lado = 0, numLados = 0){
+
+                    this.nombrem = nombre
+                    this.lado = lado
+                    this.numLados = numLados
                 }
 
             }
+
+            //Ejemplos
+            let p1 = new Poligono("Cuadrado", 2.5, 4)
+            console.log(p1)
+
         </script>
     </body>
 </html>
