@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Curso de JavaScript</title>
+
+        <!--link rel="stylesheet" href="../css/reset.css" /-->
+        <link rel="stylesheet" href="../../css/estilos.css" />
+    </head>
+    <body>
+       
+        <h1>Ejercicio 1</h1>
+        <p>
+            Crea una clase "Factura" con los atributos:<br />
+
+            - cliente {String}. Nombre completo del cliente. Valor por defecto null<br />
+            - base {Number}. Base imponible de la factura (por ejemplo 134.45). Valor por defecto 0.<br />
+            - tipoIVA {Number} % de IVA (por ejemplo, 21). Valor por defecto 21.<br />
+
+            Crea un constructor que inicialice los atributos cliente, base y tipo.<br />
+            Crea los getters y setters correspondientes.<br />
+            Crea un método getTotal que devuelva el total de la factura aplicando el porcentaje de IVA.
+        </p>
+
+        <script>
+            'use strict'
+
+            class Factura{
+
+                constructor(cliente, base, tipoIVA){
+
+                    this.cliente = null
+                    this.base = 0
+                    this.tipoIVA = 21
+                }
+
+                setCliente(string){
+
+                    this.cliente = string
+                }
+
+                getCliente(){
+
+                    return this.cliente
+                }
+
+                setBase(float){
+
+                    this.base = float
+                }
+
+                getBase(){
+
+                    return this.base
+                }
+
+                setTipoIVA(int){
+
+                    this.tipoIVA = int
+                }
+
+                getTipoIVA(){
+
+                    return this.tipoIVA
+                }
+
+                getTotal(base, tipoIVA){
+
+                    base = 134.45
+
+                    let resultado = (base * tipoIVA) / 100
+                    console.log(resultado)
+                    return resultado
+                }
+
+            }
+        </script>
+    </body>
+</html>

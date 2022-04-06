@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Curso de JavaScript</title>
+
+        <!--link rel="stylesheet" href="../css/reset.css" /-->
+        <link rel="stylesheet" href="../css/estilos.css" />
+    </head>
+    <body>
+        
+        <h1>Programación Orientadas a Objetos</h1>
+
+        <h2>Conceptos Básicos</h2>
+        <p><dfn>Clase</dfn>...</p>
+        <p><dfn>Objeto</dfn>...</p>
+        <p><dfn>Atributo</dfn>...</p>
+        <p><dfn>Método</dfn>...</p>
+
+        <h2>Cómo se hace</h2>
+        <p>Como se hace una clase:</p>
+        <pre>
+            class NombreClase{}
+        </pre>
+
+        <script>
+            class Poligono{}
+        </script>
+
+        <p>Como se hace un objeto:</p>
+        <pre>
+            let nombre_objeto = new NombreClase()
+        </pre>
+
+        <script>
+            let cuadradoVerde = new Poligono()
+        </script>
+
+        <p>Como se hace un atributo:</p>
+        <pre>
+            objeto.atributo = valor_atributo
+        </pre>
+
+        <script>
+            cuadradoVerde.lado = 42 //Creamos el atributo "lado" en el objeto cuadradoVerde
+        </script>
+
+        <p>Como se hace un método:</p>
+        <pre>
+            objeto.metodo = function(){...}
+        </pre>
+
+        <script>
+            cuadradoVerde.getArea = function(){return this.lado * this.lado}
+            console.log(cuadradoVerde.getArea())
+        </script>
+
+        <h2><a href="ejercicios/ejerciciosPOO.html">Ejercicios POO</a></h2>
+    </body>
+</html>
