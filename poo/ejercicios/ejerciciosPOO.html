@@ -108,9 +108,33 @@
 
                 constructor(nombre = null, lado = 0, numLados = 0){
 
-                    this.nombrem = nombre
+                    this.nombre = nombre
                     this.lado = lado
                     this.numLados = numLados
+                }
+
+                setNombre(nombre){
+                    this.nombre = nombre
+                }
+
+                getNombre(){
+                    return this.nombre
+                }
+
+                setLado(lado){
+                    this.lado = lado
+                }
+
+                getLado(){
+                    return this.lado
+                }
+
+                setNumLados(numLados){
+                    this.numLados = numLados
+                }
+
+                getNumLados(){
+                    return this.numLados
                 }
 
             }
@@ -119,6 +143,13 @@
             let p1 = new Poligono("Cuadrado", 2.5, 4)
             console.log(p1)
 
+            let p2 = new Poligono("Triangulo",3)
+            console.log(p2)
         </script>
+
+        <h2>Ejercicio 3</h2>
+        <p>
+            
+        </p>
     </body>
 </html>
