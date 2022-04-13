@@ -149,7 +149,50 @@
 
         <h2>Ejercicio 3</h2>
         <p>
-            
+            Crea la Clase Cuadrado que herede de Polígono ("un cuadrado en un  polígono de cuatro lados"). Crea igualmente la clase Triángulo.<br />
+
+            En las classe Cuadrado y Triángulo crea el método "verArea()" que devuelva el área del polígono según su número de lados.<br />
+            Haz que el constructor de Cuadrado y Triángulo llame al constructor de Polígono
         </p>
+
+        <script>
+            'use strict'
+
+            class Cuadrado extends Poligono{
+
+                constructor(){
+
+                    super();
+                    this.lado = 10
+                    this.numLados = 4
+                }
+
+                verArea(){
+
+                    return this.lado*this.numLados
+                }
+            }
+
+            let figura1 = new Cuadrado()
+            console.log(figura1.verArea())
+
+            class Triangulo extends Poligono{
+
+                constructor(){
+
+                    super();
+                    this.lado = 5
+                    this.numLados = 3
+                }
+
+                verArea(){
+
+                    return this.lado*this.numLados                    
+                }
+            }
+
+            let figura2 = new Triangulo()
+            console.log(figura2.verArea())
+        </script>
     </body>
 </html>
