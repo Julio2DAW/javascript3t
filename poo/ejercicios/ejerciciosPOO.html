@@ -14,11 +14,11 @@
 
         <h2>Ejercicio 1</h2>
         <p>
-            Crea una clase "Factura" con los atributos:<br />
+            Crea una clase "Factura" con los atributos:<br /><br /> 
 
             - cliente {String}. Nombre completo del cliente. Valor por defecto null<br />
             - base {Number}. Base imponible de la factura (por ejemplo 134.45). Valor por defecto 0.<br />
-            - tipoIVA {Number} % de IVA (por ejemplo, 21). Valor por defecto 21.<br />
+            - tipoIVA {Number} % de IVA (por ejemplo, 21). Valor por defecto 21.<br /><br /> 
 
             Crea un constructor que inicialice los atributos cliente, base y tipo.<br />
             Crea los getters y setters correspondientes.<br />
@@ -90,11 +90,11 @@
 
         <h2>Ejericicio 2</h2>
         <p>
-            Crea una clase "Poligono" con los atributos:<br />
+            Crea una clase "Poligono" con los atributos:<br /><br /> 
 
             - nombre {String}. Nombre del Polígono.<br />
             - lado {Number}. Número real con el tamaño del lado del polígono.<br />
-            - numLados {Number}. Número entero con el número de lados del polígono.<br />
+            - numLados {Number}. Número entero con el número de lados del polígono.<br /><br /> 
 
             Crea un constructor que reciba e inicialice los atributos.<br />
             Crea los getters y setters correspondientes.<br />
@@ -149,7 +149,7 @@
 
         <h2>Ejercicio 3</h2>
         <p>
-            Crea la Clase Cuadrado que herede de Polígono ("un cuadrado en un  polígono de cuatro lados"). Crea igualmente la clase Triángulo.<br />
+            Crea la Clase Cuadrado que herede de Polígono ("un cuadrado en un  polígono de cuatro lados"). Crea igualmente la clase Triángulo.<br /><br /> 
 
             En las classe Cuadrado y Triángulo crea el método "verArea()" que devuelva el área del polígono según su número de lados.<br />
             Haz que el constructor de Cuadrado y Triángulo llame al constructor de Polígono
@@ -194,5 +194,38 @@
             let figura2 = new Triangulo()
             console.log(figura2.verArea())
         </script>
+
+
+        <h2>Ejercicio 4</h2>
+        <p>
+            Extrae la clase Factura a un módulo y modifica el código para que se cargue correctamente.
+        </p>
+
+        <script src="ejercicio4.js" type="module"></script>
+
+        <h2>Ejercicio 5</h2>
+        <p>
+            Patrón Modelo-Vista-Controlador:<br /><br /> 
+
+            - Crea una página HTML independiente (no hagas este ejercicio aquí). Haz que cargue el fichero "controlador.js".<br /> 
+            - En la página HTML configura el head y añade el body. Añade al body un div con un párrafo, cada uno con su atributo id.<br /> 
+            - En el fichero "controlador.js", crea la clase Controlador. Al final del fichero, instancia un objeto de la clase Controlador.<br /> 
+            - Crea el fichero "vista.js" y cárgalo en el HTML.<br /> 
+            - En el fichero vista.js, crea la clase Vista.<br /> 
+            - En la clase Controlador, crea un atributo de tipo Vista.<br /> 
+            - Crea después el fichero "modelo.js" que contenga a una clase Modelo. Y crea en Controlador un atributo de tipo modelo.<br /><br /> 
+
+            Ya tienes la estructura de clases. Vamos a dar funcionalidad:<br /><br /> 
+
+            - Haz que el constructor de la clase Controlador llame al método "mostrar" de la clase Vista.<br /> 
+            - En la clase Vista programa el método "mostrar" para que escriba en el párrafo el texto "El sentido del universo es...".<br /> 
+            - En la clase Modelo programa el método "getDato" que debe devolver el valor 42.<br /> 
+            - Mejora el constructor de la clase Controlador para que llame al método "getDato" del Modelo y guarde el resultado en una variable local.<br /> 
+            - Mejora el método "mostar" de la clase Vista para que reciba un dato y concatene al mensaje anterior.<br /><br /> 
+
+            Finalmente tu programa debe mostrar "El sentido del universo es... 42".
+
+            <a href="ejercicio5/ejercicio5.html">Ejercicio</a>
+        </p>
     </body>
 </html>
