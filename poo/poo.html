@@ -5,113 +5,151 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Curso de JavaScript</title>
-
-        <!--link rel="stylesheet" href="../css/reset.css" /-->
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/estilos.css" />
     </head>
     <body>
-        
-        <h1>Programación Orientadas a Objetos</h1>
+        <header>
+            <div class=titulo>
+                <h1>Programación Orientadas a Objetos</h1>
+            </div>
+        </header>
 
-        <h2>Conceptos Básicos</h2>
-        <p><dfn>Clase</dfn>...</p>
-        <p><dfn>Objeto</dfn>...</p>
-        <p><dfn>Atributo</dfn>...</p>
-        <p><dfn>Método</dfn>...</p>
+        <main>
+            <div class=titulo2>
+                <h2>Conceptos Básicos</h2>
+            </div>
 
-        <h2>Cómo se hace</h2>
-        <p>Como se hace una clase:</p>
-        <pre>
-            class NombreClase{}
-        </pre>
+            <p><dfn>Clase</dfn>...</p>
+            <p><dfn>Objeto</dfn>...</p>
+            <p><dfn>Atributo</dfn>...</p>
+            <p><dfn>Método</dfn>...</p>
 
-        <script>
-            class Poligono{}
-        </script>
+            <div class=titulo2>
+                <h2>Cómo se hace</h2>
+            </div>
 
-        <p>Como se hace un objeto:</p>
-        <pre>
-            let nombre_objeto = new NombreClase()
-        </pre>
+            <p>Como se hace una clase:</p>
 
-        <script>
-            let cuadradoVerde = new Poligono()
-        </script>
+            <pre>
+                class NombreClase{}
+            </pre>
 
-        <p>Como se hace un atributo:</p>
-        <pre>
-            objeto.atributo = valor_atributo
-        </pre>
+            <script>
+                class Poligono{}
+            </script>
 
-        <script>
-            cuadradoVerde.lado = 42 //Creamos el atributo "lado" en el objeto cuadradoVerde
-        </script>
+            <p>Como se hace un objeto:</p>
 
-        <p>Como se hace un método:</p>
-        <pre>
-            objeto.metodo = function(){...}
-        </pre>
+            <pre>
+                let nombre_objeto = new NombreClase()
+            </pre>
 
-        <script>
-            cuadradoVerde.getArea = function(){return this.lado * this.lado}
-            console.log(cuadradoVerde.getArea())
-        </script>
+            <script>
+                let cuadradoVerde = new Poligono()
+            </script>
 
-        <p>
-            <dfn>this</dfn> es la palabra reservada que hace referencia al objeto que ejecuta el código.
-        </p>
+            <p>Como se hace un atributo:</p>
 
-        <h2>Relaciones entre clases</h2>
+            <pre>
+                objeto.atributo = valor_atributo
+            </pre>
 
-        <h3>Uso</h3>
-        <p>
-            Una clase usa a otra clase cuando alguno de sus atributos o alguno de los parámetros o resultados
-            de sus métodos son objetos de otra clase.
-        </p>
-        <p>Ejemplo</p>
-        <pre>
-            class Persona{}
+            <script>
+                cuadradoVerde.lado = 42 //Creamos el atributo "lado" en el objeto cuadradoVerde
+            </script>
 
-            class Factura{
+            <p>Como se hace un método:</p>
 
-                setCliente(cliente){ 
-                    //Si cliente es un objeto de tipo Persona, entonces la clase Factura "usa" a Persona.
+            <pre>
+                objeto.metodo = function(){...}
+            </pre>
 
-                    this.cliente = cliente
+            <script>
+                cuadradoVerde.getArea = function(){return this.lado * this.lado}
+                console.log(cuadradoVerde.getArea())
+            </script>
+
+            <p>
+                <dfn>this</dfn> es la palabra reservada que hace referencia al objeto que ejecuta el código.
+            </p>
+
+            <div class=titulo2>
+                <h2>Relaciones entre clases</h2>
+            </div>
+
+            <div class=titulo3>
+                <h3>Uso</h3>
+            </div>
+            
+            <p>
+                Una clase usa a otra clase cuando alguno de sus atributos o alguno de los parámetros o resultados
+                de sus métodos son objetos de otra clase.
+            </p>
+
+            <p>Ejemplo</p>
+
+            <pre>
+                class Persona{}
+
+                class Factura{
+
+                    setCliente(cliente){ 
+                        //Si cliente es un objeto de tipo Persona, entonces la clase Factura "usa" a Persona.
+
+                        this.cliente = cliente
+                    }
                 }
-            }
-        </pre>
+            </pre>
 
-        <h3>Herencias</h3>
-        <p>
-            Es el mecanismo por el cual una clase permite heredar las características (atributos y métodos)
-            de otra clase. La herencia permite que se puedan definir nuevas clases basadas de unas ya existentes
-            a fin de reutilizar el código, generando así una jerarquía de clases dentro de una aplicación.
-        </p>
+            <div class=titulo3>
+                <h3>Herencias</h3>
+            </div>
+            
+            <p>
+                Es el mecanismo por el cual una clase permite heredar las características (atributos y métodos)
+                de otra clase. La herencia permite que se puedan definir nuevas clases basadas de unas ya existentes
+                a fin de reutilizar el código, generando así una jerarquía de clases dentro de una aplicación.
+            </p>
 
-        <h3>Super</h3>
-        <p>
-            El método super() es un uso especial de la palabra clave super donde se llama un constructor principal.
-            En general, la palabra clave super se puede utilizar para llamar a métodos.
-        </p>
-        <p>Ejemplo</p>
-        <pre>
-            class Persona{
+            <div class=titulo3>
+                <h3>Super</h3>
+            </div>
+            
+            <p>
+                El método super() es un uso especial de la palabra clave super donde se llama un constructor principal.
+                En general, la palabra clave super se puede utilizar para llamar a métodos.
+            </p>
 
-                constructor(nombre){
-                    this.nombre = nombre
+            <p>Ejemplo</p>
+
+            <pre>
+                class Persona{
+
+                    constructor(nombre){
+                        this.nombre = nombre
+                    }
                 }
-            }
 
-            class Factura extends Persona{
+                class Factura extends Persona{
 
-                constructor(){
+                    constructor(){
 
-                    super() //LLama al constructor de la clase Persona
+                        super() //LLama al constructor de la clase Persona
+                    }
                 }
-            }
-        </pre>
+            </pre>
 
-        <h2><a href="ejercicios/ejerciciosPOO.html">Ejercicios POO</a></h2>
+            <div class=titulo4>
+                <h4><a href="ejercicios/ejerciciosPOO.html">Ejercicios POO</a></h4>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <p>Julio Antonio Ramos Gago || GitHub - Julio2DAW</p>
+            </div>
+        </footer>
     </body>
 </html>

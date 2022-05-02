@@ -1,10 +1,23 @@
 'use strict'
 
-class Vista extends Controlador{
+/**
+ * Exportamos la clase vista la cual necesitaremos en el controlador,
+ * Generamos el constructor con un mensaje por consola y un metodo con parametro que usaremos desde el controlador,
+ * @export Vista
+ * @class Vista
+ */
+ export class Vista{
 
-    mostrar(){
+    constructor(){
 
-        console.log('El sentido del universo es...')
-        return 0
+        console.log('TRON..')
     }
+
+    mostrar(dato){
+
+        let texto = document.getElementById('texto')
+        texto.textContent = 'El sentido del universo es..' + dato
+    }
+
+    
 }

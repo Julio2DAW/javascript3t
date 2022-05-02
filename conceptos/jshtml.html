@@ -5,32 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Curso de JavaScript</title>
-
-        <!--link rel="stylesheet" href="css/reset.css" /-->
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/estilos.css" />
     </head>
     <body>
-        
-        <h1>Como insertar javascript en html</h1>
-        <p>
-            Podemos insertar javascript en un documento HTML utilizando el tag de 
-            &lt;script&gt;
-        </p>
-        <code>
-            &lt;script&gt;
-                console.log('JavaScript cargado y ejecutado')
-            &lt;script&gt;
-        </code>
-        <script>
-            console.log('JavaScript cargado y ejecutado')
-        </script>
+        <header>
+            <div class=titulo>
+                <h1>Como insertar javascript en html</h1>
+            </div>
+        </header>
 
-        <p>
-            La segunda opción es enlazar un fichero en javascript
-        </p>
-        <code>
-            &lt;script src=codigo.js &gt;&lt;/script&gt;
-        </code>
+        <main>
+            <p>
+                Podemos insertar javascript en un documento HTML utilizando el tag de 
+                &lt;script&gt;
+            </p>
+
+            <code>
+                &lt;script&gt;
+                    console.log('JavaScript cargado y ejecutado')
+                &lt;script&gt;
+            </code>
+
+            <script>
+                console.log('JavaScript cargado y ejecutado')
+            </script>
+    
+            <p>
+                La segunda opción es enlazar un fichero en javascript
+            </p>
+
+            <code>
+                &lt;script src=codigo.js &gt;&lt;/script&gt;
+            </code>
+        </main>
+        
+        <footer>
+            <div>
+                <p>Julio Antonio Ramos Gago || GitHub - Julio2DAW</p>
+            </div>
+        </footer>
+        
         <script src="codigo.js"></script>
     </body>
 </html>

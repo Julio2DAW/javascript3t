@@ -5,71 +5,96 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Curso de JavaScript</title>
-
-        <!--link rel="stylesheet" href="css/reset.css" /-->
+        <!--CSS-->
+        <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/estilos.css" />
     </head>
     <body>
-        
-        <h1>Funciones</h1>
-        <p>
-            Declaramos las variables en JavaScript con: var, let o const
-        </p>
-        <code>
-            <pre>
-                var num1
-                let num2
-                const NUM3
-            </pre>
-        </code>
+        <header>
 
-        <h2>Diferencias</h2>
-        <p>
-            Declaramos las variables en JavaScript con la palabra reservada function.
-        </p>
-        <p>
-            Las funciones tienen:
-        </p>
-        <ol>
-            <li>Nombre.</li>
-            <li>Parámetros.</li>
-            <li>Resultado.</li>
-            <li>Cuerpo.</li>
-        </ol>
-        <code>
-            <pre>
-                function nombre(parametro1, parametro2){
-                    //Cuerpo con el código de la función.
-                    return resultado
-                }
-            </pre>
-        </code>
+            <div class=titulo>
+                <h1>Funciones</h1>
+            </div>
+        </header>
 
-        <p>
-            <em>Llamamos</em> a las funciones por su nombre y dándole los parámetros.
-            No olvidamos "recoger" el resultado.
-        </p>
+        <main>
+            <p>
+                Declaramos las variables en JavaScript con: var, let o const
+            </p>
 
-        <p><a href="ejercicios/funciones.html">Ejercicios de funciones</a></p>
+            <code>
+                <pre>
+                    var num1
+                    let num2
+                    const NUM3
+                </pre>
+            </code>
 
-        <h2>Estrategias para programar funciones</h2>
-        <ol>
-            <li>Hacemos la DECLARACIÓN:
-                <ul>
-                    <li>Elegir el nombre de la función.</li>
-                    <li>Elegir el nombre de los parámetros.</li>
-                    <li>Indentificado el tipo de dato del resultado.</li>
-                </ul>
-            </li>
-            <li>PROBAMOS la función:
-                <ul>
-                    <li>Devolvemos un resultado "mock" (42).</li>
-                    <li>Llamamos a la función sin parámetros y comprobamos que obtenemos el resultado mock.</li>
-                </ul>
-            </li>
-            <li>Buscamos TESTS (ejemplos).</li>
-            <li>PROGRAMAMOS el cuerpode la función hasta que pasen los test.</li>
-            <li>Si el problema es complicado, lo "simplificamos".</li>
-        </ol>
+            <div class=titulo2>
+                <h2>Diferencias</h2>
+            </div>
+
+            <p>
+                Declaramos las variables en JavaScript con la palabra reservada function.
+            </p>
+
+            <p>
+                Las funciones tienen:
+            </p>
+
+            <ol>
+                <li>1 - Nombre.</li>
+                <li>2 - Parámetros.</li>
+                <li>3 - Resultado.</li>
+                <li>4 - Cuerpo.</li>
+            </ol>
+
+            <code>
+                <pre>
+                    function nombre(parametro1, parametro2){
+                        //Cuerpo con el código de la función.
+                        return resultado
+                    }
+                </pre>
+            </code>
+    
+            <p>
+                <em>Llamamos</em> a las funciones por su nombre y dándole los parámetros.
+                No olvidamos "recoger" el resultado.
+            </p>
+    
+            <div class=titulo4>
+                <h4><a href="ejercicios/funciones.html">Ejercicios de funciones</a></h4>
+            </div>
+    
+            <div class=titulo2>
+                <h2>Estrategias para programar funciones</h2>
+            </div>
+
+            <ol>
+                <li>1 - Hacemos la DECLARACIÓN:
+                    <ul>
+                        <li>A: Elegir el nombre de la función.</li>
+                        <li>B: Elegir el nombre de los parámetros.</li>
+                        <li>C:Indentificado el tipo de dato del resultado.</li>
+                    </ul>
+                </li>
+                <li>2 - PROBAMOS la función:
+                    <ul>
+                        <li>A: Devolvemos un resultado "mock" (42).</li>
+                        <li>B: Llamamos a la función sin parámetros y comprobamos que obtenemos el resultado mock.</li>
+                    </ul>
+                </li>
+                <li>3 - Buscamos TESTS (ejemplos).</li>
+                <li>4 - PROGRAMAMOS el cuerpode la función hasta que pasen los test.</li>
+                <li>5 - Si el problema es complicado, lo "simplificamos".</li>
+            </ol>
+        </main>
+
+        <footer>
+            <div>
+                <p>Julio Antonio Ramos Gago || GitHub - Julio2DAW</p>
+            </div>
+        </footer>
     </body>
 </html>

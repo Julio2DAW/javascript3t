@@ -5,227 +5,255 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Curso de JavaScript</title>
-
-        <!--link rel="stylesheet" href="../css/reset.css" /-->
+        <!--CSS-->
+        <link rel="stylesheet" href="../../css/reset.css" />
         <link rel="stylesheet" href="../../css/estilos.css" />
     </head>
     <body>
-        <h1>Ejericicios POO</h1>
+        <header>
+            <div class=titulo>
+                <h1>Ejericicios POO</h1>
+            </div>
+        </header>
 
-        <h2>Ejercicio 1</h2>
-        <p>
-            Crea una clase "Factura" con los atributos:<br /><br /> 
+        <main>
+            <div class=titulo2>
+                <h2>Ejercicio 1</h2>
+            </div>
+            
+            <p>
+                Crea una clase "Factura" con los atributos:<br /><br /> 
 
-            - cliente {String}. Nombre completo del cliente. Valor por defecto null<br />
-            - base {Number}. Base imponible de la factura (por ejemplo 134.45). Valor por defecto 0.<br />
-            - tipoIVA {Number} % de IVA (por ejemplo, 21). Valor por defecto 21.<br /><br /> 
+                - cliente {String}. Nombre completo del cliente. Valor por defecto null<br />
+                - base {Number}. Base imponible de la factura (por ejemplo 134.45). Valor por defecto 0.<br />
+                - tipoIVA {Number} % de IVA (por ejemplo, 21). Valor por defecto 21.<br /><br /> 
 
-            Crea un constructor que inicialice los atributos cliente, base y tipo.<br />
-            Crea los getters y setters correspondientes.<br />
-            Crea un método getTotal que devuelva el total de la factura aplicando el porcentaje de IVA.
-        </p>
+                Crea un constructor que inicialice los atributos cliente, base y tipo.<br />
+                Crea los getters y setters correspondientes.<br />
+                Crea un método getTotal que devuelva el total de la factura aplicando el porcentaje de IVA.
+            </p>
 
-        <script>
-            'use strict'
+            <script>
+                'use strict'
 
-            class Factura{
-                            //Valores por defecto
-                constructor(cliente = null , base = 0, tipoIVA = 21){
+                class Factura{
+                                //Valores por defecto
+                    constructor(cliente = null , base = 0, tipoIVA = 21){
 
-                    this.cliente = cliente
-                    this.base = base
-                    this.tipoIVA = tipoIVA
+                        this.cliente = cliente
+                        this.base = base
+                        this.tipoIVA = tipoIVA
+                    }
+
+                    
+                    setCliente(cliente){
+
+                        this.cliente = cliente
+                    }
+
+                    getCliente(){
+
+                        return this.cliente
+                    }
+
+                    setBase(base){
+
+                        this.base = base
+                    }
+
+                    getBase(){
+
+                        return this.cliente
+                    }
+
+                    setTipoIVA(tipoIVA){
+
+                        this.tipoIVA = tipoIVA
+                    }
+
+                    getTipoIVA(){
+
+                        return tipoIVA
+                    }
+
+                    getTotal(){
+
+                        return (this.base*this.tipoIVA)/100+this.base
+                    }
                 }
 
-                
-                setCliente(cliente){
+                let f1 = new Factura("El corte Inglés", 2500, 21)
+                console.log(f1)
 
-                    this.cliente = cliente
+                let f2 = new Factura("Zara", 3000)
+                console.log(f2)
+
+                f2.cliente = "Embutidos López"
+                console.log(f1.cliente)
+
+                //Crear una factura
+                let mediamark = new Factura("MediaMark", 1000, 21)
+                console.log(mediamark.getTotal())
+            </script>
+
+            <div class=titulo2>
+                <h2>Ejericicio 2</h2>
+            </div>
+            
+            <p>
+                Crea una clase "Poligono" con los atributos:<br /><br /> 
+
+                - nombre {String}. Nombre del Polígono.<br />
+                - lado {Number}. Número real con el tamaño del lado del polígono.<br />
+                - numLados {Number}. Número entero con el número de lados del polígono.<br /><br /> 
+
+                Crea un constructor que reciba e inicialice los atributos.<br />
+                Crea los getters y setters correspondientes.<br />
+                Crea dos objetos de la clase Polígono con distintos atributos.
+            </p>
+
+            <script>
+                'use strict'
+
+                class Poligono{
+
+                    constructor(nombre = null, lado = 0, numLados = 0){
+
+                        this.nombre = nombre
+                        this.lado = lado
+                        this.numLados = numLados
+                    }
+
+                    setNombre(nombre){
+                        this.nombre = nombre
+                    }
+
+                    getNombre(){
+                        return this.nombre
+                    }
+
+                    setLado(lado){
+                        this.lado = lado
+                    }
+
+                    getLado(){
+                        return this.lado
+                    }
+
+                    setNumLados(numLados){
+                        this.numLados = numLados
+                    }
+
+                    getNumLados(){
+                        return this.numLados
+                    }
+
                 }
 
-                getCliente(){
+                //Ejemplos
+                let p1 = new Poligono("Cuadrado", 2.5, 4)
+                console.log(p1)
 
-                    return this.cliente
+                let p2 = new Poligono("Triangulo",3)
+                console.log(p2)
+            </script>
+
+            <div class=titulo2>
+                <h2>Ejercicio 3</h2>
+            </div>
+
+            <p>
+                Crea la Clase Cuadrado que herede de Polígono ("un cuadrado en un  polígono de cuatro lados"). Crea igualmente la clase Triángulo.<br /><br /> 
+
+                En las classe Cuadrado y Triángulo crea el método "verArea()" que devuelva el área del polígono según su número de lados.<br />
+                Haz que el constructor de Cuadrado y Triángulo llame al constructor de Polígono
+            </p>
+
+            <script>
+                'use strict'
+
+                class Cuadrado extends Poligono{
+
+                    constructor(){
+
+                        super();
+                        this.lado = 10
+                        this.numLados = 4
+                    }
+
+                    verArea(){
+
+                        return this.lado*this.numLados
+                    }
                 }
 
-                setBase(base){
+                let figura1 = new Cuadrado()
+                console.log(figura1.verArea())
 
-                    this.base = base
+                class Triangulo extends Poligono{
+
+                    constructor(){
+
+                        super();
+                        this.lado = 5
+                        this.numLados = 3
+                    }
+
+                    verArea(){
+
+                        return this.lado*this.numLados                    
+                    }
                 }
 
-                getBase(){
+                let figura2 = new Triangulo()
+                console.log(figura2.verArea())
+            </script>
 
-                    return this.cliente
-                }
+            <div class=titulo2>
+                <h2>Ejercicio 4</h2>
+            </div>
+            
+            <p>
+                Extrae la clase Factura a un módulo y modifica el código para que se cargue correctamente.
+            </p>
 
-                setTipoIVA(tipoIVA){
+            <script src="ejercicio4.js" type="module"></script>
 
-                    this.tipoIVA = tipoIVA
-                }
+            <div class=titulo2>
+                <h2>Ejercicio 5</h2>
+            </div>
+            
+            <p>
+                Patrón Modelo-Vista-Controlador:<br /><br /> 
 
-                getTipoIVA(){
+                - Crea una página HTML independiente (no hagas este ejercicio aquí). Haz que cargue el fichero "controlador.js".<br /> 
+                - En la página HTML configura el head y añade el body. Añade al body un div con un párrafo, cada uno con su atributo id.<br /> 
+                - En el fichero "controlador.js", crea la clase Controlador. Al final del fichero, instancia un objeto de la clase Controlador.<br /> 
+                - Crea el fichero "vista.js" y cárgalo en el HTML.<br /> 
+                - En el fichero vista.js, crea la clase Vista.<br /> 
+                - En la clase Controlador, crea un atributo de tipo Vista.<br /> 
+                - Crea después el fichero "modelo.js" que contenga a una clase Modelo. Y crea en Controlador un atributo de tipo modelo.<br /><br /> 
 
-                    return tipoIVA
-                }
+                Ya tienes la estructura de clases. Vamos a dar funcionalidad:<br /><br /> 
 
-                getTotal(){
+                - Haz que el constructor de la clase Controlador llame al método "mostrar" de la clase Vista.<br /> 
+                - En la clase Vista programa el método "mostrar" para que escriba en el párrafo el texto "El sentido del universo es...".<br /> 
+                - En la clase Modelo programa el método "getDato" que debe devolver el valor 42.<br /> 
+                - Mejora el constructor de la clase Controlador para que llame al método "getDato" del Modelo y guarde el resultado en una variable local.<br /> 
+                - Mejora el método "mostar" de la clase Vista para que reciba un dato y concatene al mensaje anterior.<br /><br /> 
 
-                    return (this.base*this.tipoIVA)/100+this.base
-                }
-            }
+                Finalmente tu programa debe mostrar "El sentido del universo es... 42".
+            </p>
 
-            let f1 = new Factura("El corte Inglés", 2500, 21)
-            console.log(f1)
+            <div class=titulo4>
+                <h4><a href="ejercicio5/ejercicio5.html">Ejercicio</a></h4>
+            </div>
+        </main>
 
-            let f2 = new Factura("Zara", 3000)
-            console.log(f2)
-
-            f2.cliente = "Embutidos López"
-            console.log(f1.cliente)
-
-            //Crear una factura
-            let mediamark = new Factura("MediaMark", 1000, 21)
-            console.log(mediamark.getTotal())
-        </script>
-
-        <h2>Ejericicio 2</h2>
-        <p>
-            Crea una clase "Poligono" con los atributos:<br /><br /> 
-
-            - nombre {String}. Nombre del Polígono.<br />
-            - lado {Number}. Número real con el tamaño del lado del polígono.<br />
-            - numLados {Number}. Número entero con el número de lados del polígono.<br /><br /> 
-
-            Crea un constructor que reciba e inicialice los atributos.<br />
-            Crea los getters y setters correspondientes.<br />
-            Crea dos objetos de la clase Polígono con distintos atributos.
-        </p>
-
-        <script>
-            'use strict'
-
-            class Poligono{
-
-                constructor(nombre = null, lado = 0, numLados = 0){
-
-                    this.nombre = nombre
-                    this.lado = lado
-                    this.numLados = numLados
-                }
-
-                setNombre(nombre){
-                    this.nombre = nombre
-                }
-
-                getNombre(){
-                    return this.nombre
-                }
-
-                setLado(lado){
-                    this.lado = lado
-                }
-
-                getLado(){
-                    return this.lado
-                }
-
-                setNumLados(numLados){
-                    this.numLados = numLados
-                }
-
-                getNumLados(){
-                    return this.numLados
-                }
-
-            }
-
-            //Ejemplos
-            let p1 = new Poligono("Cuadrado", 2.5, 4)
-            console.log(p1)
-
-            let p2 = new Poligono("Triangulo",3)
-            console.log(p2)
-        </script>
-
-        <h2>Ejercicio 3</h2>
-        <p>
-            Crea la Clase Cuadrado que herede de Polígono ("un cuadrado en un  polígono de cuatro lados"). Crea igualmente la clase Triángulo.<br /><br /> 
-
-            En las classe Cuadrado y Triángulo crea el método "verArea()" que devuelva el área del polígono según su número de lados.<br />
-            Haz que el constructor de Cuadrado y Triángulo llame al constructor de Polígono
-        </p>
-
-        <script>
-            'use strict'
-
-            class Cuadrado extends Poligono{
-
-                constructor(){
-
-                    super();
-                    this.lado = 10
-                    this.numLados = 4
-                }
-
-                verArea(){
-
-                    return this.lado*this.numLados
-                }
-            }
-
-            let figura1 = new Cuadrado()
-            console.log(figura1.verArea())
-
-            class Triangulo extends Poligono{
-
-                constructor(){
-
-                    super();
-                    this.lado = 5
-                    this.numLados = 3
-                }
-
-                verArea(){
-
-                    return this.lado*this.numLados                    
-                }
-            }
-
-            let figura2 = new Triangulo()
-            console.log(figura2.verArea())
-        </script>
-
-
-        <h2>Ejercicio 4</h2>
-        <p>
-            Extrae la clase Factura a un módulo y modifica el código para que se cargue correctamente.
-        </p>
-
-        <script src="ejercicio4.js" type="module"></script>
-
-        <h2>Ejercicio 5</h2>
-        <p>
-            Patrón Modelo-Vista-Controlador:<br /><br /> 
-
-            - Crea una página HTML independiente (no hagas este ejercicio aquí). Haz que cargue el fichero "controlador.js".<br /> 
-            - En la página HTML configura el head y añade el body. Añade al body un div con un párrafo, cada uno con su atributo id.<br /> 
-            - En el fichero "controlador.js", crea la clase Controlador. Al final del fichero, instancia un objeto de la clase Controlador.<br /> 
-            - Crea el fichero "vista.js" y cárgalo en el HTML.<br /> 
-            - En el fichero vista.js, crea la clase Vista.<br /> 
-            - En la clase Controlador, crea un atributo de tipo Vista.<br /> 
-            - Crea después el fichero "modelo.js" que contenga a una clase Modelo. Y crea en Controlador un atributo de tipo modelo.<br /><br /> 
-
-            Ya tienes la estructura de clases. Vamos a dar funcionalidad:<br /><br /> 
-
-            - Haz que el constructor de la clase Controlador llame al método "mostrar" de la clase Vista.<br /> 
-            - En la clase Vista programa el método "mostrar" para que escriba en el párrafo el texto "El sentido del universo es...".<br /> 
-            - En la clase Modelo programa el método "getDato" que debe devolver el valor 42.<br /> 
-            - Mejora el constructor de la clase Controlador para que llame al método "getDato" del Modelo y guarde el resultado en una variable local.<br /> 
-            - Mejora el método "mostar" de la clase Vista para que reciba un dato y concatene al mensaje anterior.<br /><br /> 
-
-            Finalmente tu programa debe mostrar "El sentido del universo es... 42".
-
-            <a href="ejercicio5/ejercicio5.html">Ejercicio</a>
-        </p>
+        <footer>
+            <div>
+                <p>Julio Antonio Ramos Gago || GitHub - Julio2DAW</p>
+            </div>
+        </footer>
     </body>
 </html>
